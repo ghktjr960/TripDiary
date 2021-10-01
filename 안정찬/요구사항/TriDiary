@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-01T17:52:48.485Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="ItqCS4kH5FNDCEGwxu7v" version="15.4.1" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-10-01T17:56:51.291Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="BmQdxxtTt3ihUzjMtx-p" version="15.4.1" type="github" pages="5">
   <diagram id="VRTdGlDhhRCyMeaslp9j" name="페이지-1">
     <mxGraphModel dx="3384" dy="3313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -684,7 +684,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="회원 Flow" id="0jFrIZjx0Yjjsyb8IuZY">
-    <mxGraphModel dx="1865" dy="585" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2310" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="cc_Pm7vfQ62GPnsQkFox-0" />
         <mxCell id="cc_Pm7vfQ62GPnsQkFox-1" parent="cc_Pm7vfQ62GPnsQkFox-0" />
@@ -1294,7 +1294,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="관리자 Flow" id="YF2rkUyd15tsF-Gf4bpK">
-    <mxGraphModel dx="1483" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1384" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="FdDmFL96N8Z0RCU9fcsp-0" />
         <mxCell id="FdDmFL96N8Z0RCU9fcsp-1" parent="FdDmFL96N8Z0RCU9fcsp-0" />
