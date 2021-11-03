@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="false" />
+		<setting name="useGeneratedKeys" value="false" />
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+		<typeAliases>
+			<typeAlias alias="mainBoardListVo" type="com.tripdiary.vo.MainBoardListVo"/>
+			<typeAlias alias="tagVo" type="com.tripdiary.vo.TagVo"/>
+			<typeAlias alias="pickVo" type="com.tripdiary.vo.PickVo"/>
+			<typeAlias alias="memberVo" type="com.tripdiary.vo.MemberVo"/>
+			<typeAlias alias="profileImgVo" type="com.tripdiary.vo.ProfileImgVo"/>
+			<typeAlias alias="pageVo" type="com.tripdiary.vo.PageVo"/>
+			<typeAlias alias="reportCntVo" type="com.tripdiary.vo.ReportCntVo"/>
+			<typeAlias alias="delMemberVo" type="com.tripdiary.vo.DelMemberVo"/>
+			<typeAlias alias="reportBoardVo" type="com.tripdiary.vo.ReportBoardVo"/>
+			<typeAlias alias="reportReplyVo" type="com.tripdiary.vo.ReportReplyVo"/>
+		</typeAliases>
+</configuration>

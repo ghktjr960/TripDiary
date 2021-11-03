@@ -21,8 +21,9 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.tripdiary.develop" />
+	<context:component-scan base-package="com.tripdiary.*" />
 	
-	
+	<resources location="file:///C:/tripdiary/boardImg/" mapping="/main/**" />
+	<resources location="file:///C:/tripdiary/profileImg/" mapping="/profile/**" />
 	
 </beans:beans>
