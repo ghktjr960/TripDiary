@@ -32,8 +32,8 @@
     </bean>	
     
 
-    <context:component-scan base-package="com.tripdiary.vo" ></context:component-scan>
-	<context:component-scan base-package="com.tripdiary.dao" ></context:component-scan>
-	<context:component-scan base-package="com.tripdiary.service" ></context:component-scan>
+    <context:component-scan base-package="com.tripdiary.HSvo" ></context:component-scan>
+	<context:component-scan base-package="com.tripdiary.HSdao" ></context:component-scan>
+	<context:component-scan base-package="com.tripdiary.HSservice" ></context:component-scan>
   	
 </beans>

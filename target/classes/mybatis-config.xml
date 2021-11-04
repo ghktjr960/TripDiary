@@ -8,15 +8,15 @@
 		<setting name="mapUnderscoreToCamelCase" value="true" />
 	</settings>
 		<typeAliases>
-			<typeAlias alias="mainBoardListVo" type="com.tripdiary.vo.MainBoardListVo"/>
-			<typeAlias alias="tagVo" type="com.tripdiary.vo.TagVo"/>
-			<typeAlias alias="pickVo" type="com.tripdiary.vo.PickVo"/>
-			<typeAlias alias="memberVo" type="com.tripdiary.vo.MemberVo"/>
-			<typeAlias alias="profileImgVo" type="com.tripdiary.vo.ProfileImgVo"/>
-			<typeAlias alias="pageVo" type="com.tripdiary.vo.PageVo"/>
-			<typeAlias alias="reportCntVo" type="com.tripdiary.vo.ReportCntVo"/>
-			<typeAlias alias="delMemberVo" type="com.tripdiary.vo.DelMemberVo"/>
-			<typeAlias alias="reportBoardVo" type="com.tripdiary.vo.ReportBoardVo"/>
-			<typeAlias alias="reportReplyVo" type="com.tripdiary.vo.ReportReplyVo"/>
+			<typeAlias alias="mainBoardListVo" type="com.tripdiary.HSvo.MainBoardListVo"/>
+			<typeAlias alias="tagVo" type="com.tripdiary.HSvo.TagVo"/>
+			<typeAlias alias="pickVo" type="com.tripdiary.HSvo.PickVo"/>
+			<typeAlias alias="memberVo" type="com.tripdiary.HSvo.MemberVo"/>
+			<typeAlias alias="profileImgVo" type="com.tripdiary.HSvo.ProfileImgVo"/>
+			<typeAlias alias="pageVo" type="com.tripdiary.HSvo.PageVo"/>
+			<typeAlias alias="reportCntVo" type="com.tripdiary.HSvo.ReportCntVo"/>
+			<typeAlias alias="delMemberVo" type="com.tripdiary.HSvo.DelMemberVo"/>
+			<typeAlias alias="reportBoardVo" type="com.tripdiary.HSvo.ReportBoardVo"/>
+			<typeAlias alias="reportReplyVo" type="com.tripdiary.HSvo.ReportReplyVo"/>
 		</typeAliases>
 </configuration>
