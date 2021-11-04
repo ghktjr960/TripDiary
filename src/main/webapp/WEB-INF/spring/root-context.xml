@@ -12,6 +12,21 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<!-- Gmail -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="mailsendtest0423@gmail.com" />
+		<property name="password" value="dqrnwsgjxzwxbdja" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+		</property>
+	</bean>
+		
 	<!-- 오라클 접속 -->
     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
         <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>
@@ -19,7 +34,7 @@
         <property name="username" value="triptest"/>
         <property name="password" value="1234"/>
     </bean>
-   
+   	
     <!-- Mybatis 연동 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
          <property name="dataSource" ref="dataSource" />
