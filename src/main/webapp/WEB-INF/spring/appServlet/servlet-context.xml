@@ -14,16 +14,26 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/profile/**" location="file:///C:/mp/profile_img/"/>
+	<resources mapping="/boardImg/**" location="file:///C:/mp/board_img/"/>
+	<resources mapping="/thumbnail/**" location="file:///C:/mp/board_thumbnail/"/>
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
+
+	
+	<context:component-scan base-package="com.tripdiary.TMcontroller" />
+	<context:component-scan base-package="com.tripdiary.TMdao" />
+	<context:component-scan base-package="com.tripdiary.TMservice" />
+	<context:component-scan base-package="com.tripdiary.TMvo" />
+	<context:component-scan base-package="com.tripdiary.TMutil" />
 	
 	<context:component-scan base-package="com.tripdiary.HScontroller" />
-	
-	<resources location="file:///C:/tripdiary/boardImg/" mapping="/main/**" />
-	<resources location="file:///C:/tripdiary/profileImg/" mapping="/profile/**" />
+	<context:component-scan base-package="com.tripdiary.HSvo" ></context:component-scan>
+	<context:component-scan base-package="com.tripdiary.HSdao" ></context:component-scan>
+	<context:component-scan base-package="com.tripdiary.HSservice" ></context:component-scan>
 	
 </beans:beans>
