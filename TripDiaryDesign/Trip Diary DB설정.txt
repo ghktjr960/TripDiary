@@ -1,0 +1,384 @@
+CREATE TABLE member (
+	member_num	number		NOT NULL,
+	id	varchar2(50)	UNIQUE	NOT NULL,
+	password	varchar2(100)		NOT NULL,
+	nickname	varchar2(50)	UNIQUE	NOT NULL,
+	email	varchar2(50)	UNIQUE	NOT NULL,
+	birth_year	varchar2(6)		NOT NULL,
+	birth	varchar2(6)		NOT NULL,
+	regdate	timestamp	DEFAULT sysdate	NOT NULL,
+	gender	varchar2(10)		NOT NULL,
+	admin	number	DEFAULT 0	NOT NULL
+);
+
+CREATE TABLE board (
+	board_num	number		NOT NULL,
+	member_num	number		NOT NULL,
+	place	varchar2(50)		NOT NULL,
+	content	varchar2(2000)		NULL,
+	regdate	timestamp	DEFAULT sysdate	NOT NULL,
+	tripdate	date		NOT NULL,
+	td_like_cnt	number		NULL
+);
+
+CREATE TABLE tag (
+	tag_num 	number		NOT NULL,
+	board_num	number		NOT NULL,
+	tag	varchar2(20)		NULL
+);
+
+CREATE TABLE board_img (
+	board_img_num	number		NOT NULL,
+	board_num	number		NOT NULL,
+	org_file_name	varchar2(260)		NOT NULL,
+	store_file_name varchar2(36)		NOT NULL,
+	file_size	number		NOT NULL,
+	file_type	varchar2(10)		NOT NULL,
+	main_img	number		NOT NULL
+);
+
+CREATE TABLE profile (
+	profile_num	number		NOT NULL,
+	member_num	number		NOT NULL,
+	message 	varchar2(100)	DEFAULT '프로필사진을 클릭하여 상태메세지를 수정하여주세요'	NOT NULL
+);
+
+CREATE TABLE profile_img (
+	profile_img_num	number		NOT NULL,
+	member_num	number		NOT NULL,
+	org_file_name	varchar2(260)		NOT NULL,
+	store_file_name	varchar2(36)		NOT NULL,
+	file_size	number		NOT NULL,
+	file_type 	varchar2(10)		NULL
+);
+
+CREATE TABLE map (
+	map_num	number		NOT NULL,
+	member_num	number		NOT NULL,
+	marker_lon	number		NOT NULL,
+	marker_lat	number		NOT NULL,
+	board_num	number		NOT NULL
+);
+
+CREATE TABLE emblem (
+	emblem_num	number		NOT NULL,
+	emblem_name	varchar2(50)	UNIQUE	NOT NULL,
+	emblem_explain	varchar2(100)		NOT NULL
+);
+
+CREATE TABLE emblem_get (
+	emblem_get_num	number		NOT NULL,
+	member_num	number		NOT NULL,
+	emblem_num	number		NOT NULL
+);
+
+CREATE TABLE chatting (
+	chatting_num	number		NOT NULL,
+	chatting_send	varchar2(50)		NOT NULL,
+	chatting_receive	varchar2(50)		NOT NULL,
+	chatting_date	timestamp		NOT NULL,
+	chatting_content	varchar2(200)		NOT NULL
+);
+
+CREATE TABLE reply (
+	reply_num	number		NOT NULL,
+	board_num	number		NOT NULL,
+	member_num	number		NOT NULL,
+	content	varchar2(200)		NOT NULL,
+	regdate	timestamp	DEFAULT sysdate	NOT NULL
+);
+
+CREATE TABLE report_member (
+	report_member_num	number		NOT NULL,
+	member_num	number		NOT NULL,
+	report_type	varchar2(100)		NOT NULL
+);
+
+CREATE TABLE report_reply (
+	report_reply_num	number		NOT NULL,
+	reply_num	number		NOT NULL,
+	reply_content	varchar2(200)		NULL,
+	report_send	varchar2(50)		NOT NULL,
+	report_receive	varchar2(50)		NOT NULL,
+	report_content	varchar2(100)		NOT NULL,
+	report_type	varchar2(100)		NOT NULL,
+	report_date	timestamp	DEFAULT sysdate	NOT NULL,
+	member_num_send	number		NULL,
+	member_num_receive	number		NULL
+);
+
+CREATE TABLE report_board (
+	report_board_num	number		NOT NULL,
+	board_num	number		NOT NULL,
+	report_send	varchar2(50)		NOT NULL,
+	report_receive	varchar2(50)		NOT NULL,
+	report_type	varchar2(100)		NOT NULL,
+	report_content	varchar2(100)		NOT NULL,
+	report_date	timestamp	DEFAULT sysdate	NOT NULL,
+	member_num_send	number		NULL,
+	member_num_receive	number		NULL
+);
+
+CREATE TABLE pick (
+	pick_num		number		NOT NULL,
+	member_num	number		NOT NULL,
+	board_num	number		NOT NULL,
+	pick_regdate	timestamp		NULL
+);
+
+CREATE TABLE td_like (
+	td_like_num	number		NOT NULL,
+	member_num	number		NOT NULL,
+	board_num	number		NOT NULL
+);
+
+CREATE TABLE report_cnt (
+	report_cnt_num	number		NOT NULL,
+	member_num	number		NOT NULL,
+	report_com_cnt	number	DEFAULT 0	NOT NULL,
+	report_cnt	number	DEFAULT 0	NOT NULL,
+	warning_cnt	number	DEFAULT 0	NOT NULL
+);
+
+CREATE TABLE del_member (
+	del_member_num	number		NOT NULL,
+	member_num	number		NULL,
+	member_id	varchar2(50)	UNIQUE	NULL,
+	timeover	number		NULL,
+	del_date	timestamp		NULL
+);
+
+CREATE TABLE member_act_cnt (
+	member_act_cnt	number		NOT NULL,
+	member_num	number		NOT NULL,
+	td_like_press_cnt	number		NULL,
+	pick_press_cnt	number		NULL,
+	board_write_cnt	number		NULL,
+	reply_write_cnt	number		NULL,
+	td_like_receive_cnt	number		NULL
+);
+
+ALTER TABLE member ADD CONSTRAINT PK_MEMBER PRIMARY KEY (
+	member_num
+);
+
+ALTER TABLE board ADD CONSTRAINT PK_BOARD PRIMARY KEY (
+	board_num
+);
+
+ALTER TABLE tag ADD CONSTRAINT PK_TAG PRIMARY KEY (
+	tag_num
+);
+
+ALTER TABLE board_img ADD CONSTRAINT PK_BOARD_IMG PRIMARY KEY (
+	board_img_num
+);
+
+ALTER TABLE profile ADD CONSTRAINT PK_PROFILE PRIMARY KEY (
+	profile_num
+);
+
+ALTER TABLE profile_img ADD CONSTRAINT PK_PROFILE_IMG PRIMARY KEY (
+	profile_img_num
+);
+
+ALTER TABLE map ADD CONSTRAINT PK_MAP PRIMARY KEY (
+	map_num
+);
+
+ALTER TABLE emblem ADD CONSTRAINT PK_EMBLEM PRIMARY KEY (
+	emblem_num
+);
+
+ALTER TABLE emblem_get ADD CONSTRAINT PK_EMBLEM_GET PRIMARY KEY (
+	emblem_get_num
+);
+
+ALTER TABLE chatting ADD CONSTRAINT PK_CHATTING PRIMARY KEY (
+	chatting_num
+);
+
+ALTER TABLE reply ADD CONSTRAINT PK_REPLY PRIMARY KEY (
+	reply_num
+);
+
+ALTER TABLE report_member ADD CONSTRAINT PK_REPORT_MEMBER PRIMARY KEY (
+	report_member_num
+);
+
+ALTER TABLE report_reply ADD CONSTRAINT PK_REPORT_REPLY PRIMARY KEY (
+	report_reply_num
+);
+
+ALTER TABLE report_board ADD CONSTRAINT PK_REPORT_BOARD PRIMARY KEY (
+	report_board_num
+);
+
+ALTER TABLE pick ADD CONSTRAINT PK_PICK PRIMARY KEY (
+	pick_num
+);
+
+ALTER TABLE td_like ADD CONSTRAINT PK_TD_LIKE PRIMARY KEY (
+	td_like_num
+);
+
+ALTER TABLE report_cnt ADD CONSTRAINT PK_REPORT_CNT PRIMARY KEY (
+	report_cnt_num
+);
+
+ALTER TABLE del_member ADD CONSTRAINT PK_DEL_MEMBER PRIMARY KEY (
+	del_member_num
+);
+
+ALTER TABLE member_act_cnt ADD CONSTRAINT PK_MEMBER_ACT_CNT PRIMARY KEY (
+	member_act_cnt
+);
+
+create sequence member_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence board_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence tag_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence board_img_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence profile_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence profile_img_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence map_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence emblem_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence emblem_get_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence chatting_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence reply_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence report_member_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence report_reply_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence report_board_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence pick_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence td_like_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence report_cnt_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence del_member_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+create sequence member_act_cnt_seq
+start with 1
+increment by 1
+nomaxvalue
+nocycle
+nocache;
+
+insert into emblem values (1, '좋아요 한 스푼', '좋아요 1번 누르기');
+insert into emblem values (2, '취향 존중!', '좋아요 10번 누르기');
+insert into emblem values (3, '만인의 연인', '좋아요 100번 누르기');
+insert into emblem values (4, '여기 가볼까?!', 'pick 1번 하기');
+insert into emblem values (5, '방구석 여행가', 'pick 10번 하기');
+insert into emblem values (6, '핫플 수집가', 'pick 100번 하기');
+insert into emblem values (7, '첫 여행지', '글 1번 작성하기');
+insert into emblem values (8, '베태랑 모험가', '글 10번 작성하기');
+insert into emblem values (9, '서바이벌 전문가', '글 100번 작성하기');
+insert into emblem values (10, '소통의 시작', '댓글 1번 작성하기');
+insert into emblem values (11, '분위기 메이커', '댓글 10번 작성하기');
+insert into emblem values (12, '프로 공감러', '댓글 100번 작성하기');
+insert into emblem values (13, '나 좋아하나봐!', '좋아요 1번 받기');
+insert into emblem values (14, '매력 발산중', '좋아요 10번 받기');
+insert into emblem values (15, '인플루언서!', '좋아요 100번 받기');
