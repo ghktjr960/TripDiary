@@ -24,12 +24,12 @@
 <br><br>
 
 # 개발에 사용된 사이트(링크)
-## [Trip Diary](http://cmh93.synology.me:49158/main)
-## [DB설계](https://www.erdcloud.com/d/fKvpacZ6HFLBX5C2S)
-## [UI설계](https://ovenapp.io/view/HCQC9wnUpKLxnmZfDU1sIZyLpJroaMEH/)
-## [개발코드](https://github.com/ghktjr960/TripDiaryTeam)
-## [기타설계문서](https://github.com/ghktjr960/TripDiary)
-## [발표자료](https://docs.google.com/presentation/d/1sP1d0vG8pp4Txwh2A_AsKIe3wMnhdOGct6V3qYySQYA/edit#slide=id.p1)
+### [Trip Diary](http://cmh93.synology.me:49158/main)
+### [DB설계](https://www.erdcloud.com/d/fKvpacZ6HFLBX5C2S)
+### [UI설계](https://ovenapp.io/view/HCQC9wnUpKLxnmZfDU1sIZyLpJroaMEH/)
+### [개발코드](https://github.com/ghktjr960/TripDiaryTeam)
+### [기타설계문서](https://github.com/ghktjr960/TripDiary)
+### [발표자료](https://docs.google.com/presentation/d/1sP1d0vG8pp4Txwh2A_AsKIe3wMnhdOGct6V3qYySQYA/edit#slide=id.p1)
 <br>
 
 # 개발환경 및 개발도구
