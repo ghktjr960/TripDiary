@@ -1,6 +1,6 @@
 # Trip Diary
 
-![Trip_Diary_logo](https://user-images.githubusercontent.com/88276563/147346116-c4fe43ca-2b06-4770-b6a4-f7417e98a39b.png)
+![Trip_Diary](https://user-images.githubusercontent.com/88276563/147346116-c4fe43ca-2b06-4770-b6a4-f7417e98a39b.png)
 
 # 프로젝트 소개
 ### 개발기간 2021.9.23 ~ 2021.11.10 
