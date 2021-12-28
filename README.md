@@ -1,6 +1,6 @@
 # Trip Diary
 
-![Trip_Diary](https://user-images.githubusercontent.com/88276563/147346116-c4fe43ca-2b06-4770-b6a4-f7417e98a39b.png)
+![Trip_Diary_logo](https://user-images.githubusercontent.com/88276563/147346116-c4fe43ca-2b06-4770-b6a4-f7417e98a39b.png)
 
 # 프로젝트 소개
 ### 개발기간 2021.9.23 ~ 2021.11.10 
@@ -22,6 +22,21 @@
 - 김태민
 - 박준하
 <br><br>
+
+# 주요기능
+**관리자**
+> 회원 신고 처리<br>
+> 게시글 신고 처리<br>
+> 댓글 신고 처리<br>
+> 탈퇴 회원 관리<br>
+
+**사용자**
+> 회원가입 및 로그인<br>
+> 게시글 작성 및 수정<br>
+> 게시글 열람 및 검색<br>
+> 좋아요, 찜하기, 엠블럼 획득<br>
+> 다녀온 장소 확인<br>
+> 회원, 게시글, 댓글 신고<br>
 
 # 개발에 사용된 사이트(링크)
 ### [Trip Diary](http://cmh93.synology.me:49158/main)
